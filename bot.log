@@ -1,0 +1,33 @@
+2025-11-24 04:13:25 | INFO     | ============================================================
+2025-11-24 04:13:25 | INFO     | 🚀 Avantis Delta Neutro Bot v1.0
+2025-11-24 04:13:25 | INFO     | ============================================================
+2025-11-24 04:13:27 | INFO     | Modo: Iniciar Trading
+2025-11-24 04:13:28 | INFO     | Inicializando TraderClient Avantis...
+2025-11-24 04:13:45 | INFO     | Cliente conectado: 0xa5F55f8Bc4bBf515dF830A81674A2504191D3Dd5
+2025-11-24 04:13:45 | INFO     | ✅ Cliente inicializado: 0xa5F55f8Bc4bBf515dF830A81674A2504191D3Dd5
+2025-11-24 04:13:45 | INFO     | ============================================================
+2025-11-24 04:13:45 | INFO     | 🔍 DEBUG - Configuração Carregada:
+2025-11-24 04:13:45 | INFO     |    order_value_usd: $20-$20
+2025-11-24 04:13:45 | INFO     |    max_leverage: 1x
+2025-11-24 04:13:45 | INFO     |    order_duration_min: 2-2 min
+2025-11-24 04:13:45 | INFO     | ============================================================
+2025-11-24 04:13:45 | INFO     | ======================================================================
+2025-11-24 04:13:45 | INFO     | 🔄 CICLO #1 - Verificando posições abertas...
+2025-11-24 04:13:45 | INFO     | ======================================================================
+2025-11-24 04:13:53 | INFO     | Mercado selecionado: BTC/USD (index: 1)
+2025-11-24 04:13:58 | DEBUG    | 📊 Valores calculados: raw=20, max=20.0, final=20
+2025-11-24 04:13:58 | INFO     | Iniciando trade | Mercado: BTC/USD | Long: $10.00 | Short: $10.00 | Duração: 2 min
+2025-11-24 04:14:04 | INFO     | 📍 Usando índices: LONG=0, SHORT=1
+2025-11-24 04:14:04 | INFO     | 🔄 Abrindo delta neutro...
+2025-11-24 04:14:04 | INFO     | 1️⃣ Abrindo LONG (index=0)...
+2025-11-24 04:14:07 | SUCCESS  | [0xa5F55f8B] LONG 10.0 USDC @ 1x - TX: 0x29623810...
+2025-11-24 04:14:07 | INFO     | ⏳ Aguardando 3.0s para nonce atualizar...
+2025-11-24 04:14:10 | INFO     | 2️⃣ Abrindo SHORT (index=1)...
+2025-11-24 04:14:12 | ERROR    | [0xa5F55f8B] SHORT falhou - TX status != 1
+2025-11-24 04:14:12 | INFO     | 📊 LONG=✅ | SHORT=❌ | 8.3s
+2025-11-24 04:14:12 | ERROR    | ❌ SHORT falhou - fechando LONG...
+2025-11-24 04:14:17 | INFO     | ⚡ Iniciando fechamento de posições...
+2025-11-24 04:14:19 | DEBUG    | Nenhuma posição encontrada (parsing error ignorado)
+2025-11-24 04:14:19 | INFO     | Nenhuma posição aberta para fechar.
+2025-11-24 04:14:19 | ERROR    | ❌ Falha 1/3
+2025-11-24 04:14:19 | WARNING  | 🔄 Pulando para próximo ciclo...

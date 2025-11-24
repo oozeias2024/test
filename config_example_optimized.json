@@ -1,0 +1,47 @@
+{
+  "order_value_usd": {
+    "min": 20,
+    "max": 100,
+    "_comment": "Valor TOTAL em USD (será dividido: 50% long + 50% short). Min $20 = $10 cada posição (mínimo Avantis)"
+  },
+  
+  "order_duration_min": {
+    "min": 2,
+    "max": 5,
+    "_comment": "Quanto tempo (em MINUTOS) as posições ficam abertas. Bot fecha EXATAMENTE após esse tempo"
+  },
+  
+  "delay_between_trading_cycles_min": {
+    "min": 2,
+    "max": 5,
+    "_comment": "Tempo de ESPERA (em minutos) entre um ciclo e outro. Após fechar posições, aguarda antes de abrir novas"
+  },
+  
+  "max_leverage": 5,
+  "_comment_leverage": "Alavancagem máxima. Valores: 2x (conservador) | 5x (moderado) | 10x (agressivo) | 20x (muito arriscado)",
+  
+  "nonce_delay_seconds": 2.0,
+  "_comment_nonce": "Tempo entre abertura de LONG e SHORT (em segundos). CRÍTICO: Aguardar nonce atualizar. Valores: 1.5s (mínimo) | 2.0s (padrão) | 3.0s (seguro)",
+  
+  "orders_distribution_noise": 0,
+  "_comment_noise": "Variação no tamanho long vs short. 0 = sempre 50/50 (recomendado para delta neutro). NÃO MUDE!",
+  
+  "debug_level": "INFO",
+  "_comment_debug": "Nível de logs. Opções: DEBUG (muito detalhado) | INFO (normal) | WARNING (só avisos) | ERROR (só erros)",
+  
+  "_info_section": "=== INFORMAÇÕES IMPORTANTES ===",
+  "_info_1": "MÍNIMOS AVANTIS: Cada posição (long ou short) precisa de ~$10 USD mínimo",
+  "_info_2": "SALDO RECOMENDADO: Tenha 3-4x o valor de order_value_usd em USDC",
+  "_info_3": "EXEMPLO: Se order_value_usd max = $100, tenha $300-400 USDC na conta",
+  "_info_4": "GAS FEES: Precisa de ETH na Base Network para pagar gas (mínimo 0.01 ETH)",
+  
+  "_calculation_section": "=== CÁLCULOS ===",
+  "_calc_1": "Ciclo completo = order_duration + delay_between_cycles",
+  "_calc_2": "Exemplo: 2-5 min (trade) + 2-5 min (espera) = 4-10 min por ciclo",
+  "_calc_3": "Ciclos por hora: 60 min ÷ (4-10 min) = ~6-15 ciclos/hora",
+  
+  "_frequency_section": "=== FREQUÊNCIAS SUGERIDAS ===",
+  "_freq_test": "TESTE: duration 1-2min + delay 1-2min = ~20 ciclos/hora",
+  "_freq_normal": "NORMAL: duration 3-10min + delay 2-5min = ~6-8 ciclos/hora",
+  "_freq_production": "PRODUÇÃO: duration 10-30min + delay 5-15min = ~2-3 ciclos/hora"
+}

@@ -1,0 +1,19 @@
+{
+  "order_value_usd": {
+    "min": 20,
+    "max": 20
+  },
+  "order_duration_min": {
+    "min": 2,
+    "max": 2
+  },
+  "delay_between_trading_cycles_min": {
+    "min": 2,
+    "max": 2
+  },
+  "max_leverage": 1,
+  "orders_distribution_noise": 0,
+  "debug_level": "INFO",
+  "_comment_1": "CRÍTICO: order_value_usd mínimo $20 = $10 long + $10 short. AMBAS as posições devem abrir juntas ou nenhuma abre (delta neutro)",
+  "_comment_2": "nonce_delay_seconds:,Tempo entre long e short (0.3s = 300ms, quase instantâneo). Valores: 0.2-0.5s recomendado. NÃO usar 0s!"
+}

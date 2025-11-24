@@ -1,0 +1,57 @@
+═══════════════════════════════════════════════════════════════
+  CORREÇÕES APLICADAS - Bot Avantis Delta Neutro v1.0.2
+═══════════════════════════════════════════════════════════════
+
+🐛 PROBLEMA 1 (v1.0.1):
+   Erro: ImportError: cannot import name 'TradeInput'
+   
+   ✅ SOLUÇÃO:
+   Corrigido imports em src/avantis/trade.py:
+   - from avantis_trader_sdk.types import TradeInput, TradeInputOrderType
+
+-------------------------------------------------------------------
+
+🐛 PROBLEMA 2 (v1.0.2):
+   Erro: FeeParametersRPC.get_opening_fee() got unexpected keyword
+   
+   ✅ SOLUÇÃO:
+   Removido cálculo manual de fees em src/avantis/trade.py
+   (SDK calcula automaticamente)
+
+-------------------------------------------------------------------
+
+📊 RESULTADO:
+   Bot agora abre posições corretamente!
+   
+   Você deve ver:
+   ✅ LONG 10.0 USDC @ 10x - Ordem enviada
+   ✅ SHORT 10.0 USDC @ 10x - Ordem enviada
+   ✅ 2/2 posições abertas com sucesso
+
+-------------------------------------------------------------------
+
+🚀 COMO USAR:
+
+   DOCKER:
+   1. docker build -t avantis-bot .
+   2. docker run --rm -it -v "${PWD}:/app" avantis-bot
+
+   PYTHON:
+   1. python main.py
+
+-------------------------------------------------------------------
+
+📝 ANTES DE EXECUTAR:
+   1. Configure data/accounts.xlsx com sua private key
+   2. Tenha USDC + ETH na Base Network
+   3. Execute: python test_setup.py
+
+-------------------------------------------------------------------
+
+📚 DOCUMENTAÇÃO:
+   - README.md (guia completo)
+   - QUICK_START.md (início rápido)
+   - UPDATE_GUIDE.md (guia de atualização)
+   - TROUBLESHOOTING.md (solução de problemas)
+
+═══════════════════════════════════════════════════════════════
